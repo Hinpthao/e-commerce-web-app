@@ -1,0 +1,77 @@
+.breadcrumb{
+    display: inline-block;
+    padding: 0 0 20px 0;
+    margin: 0;
+    background: transparent;
+    border-radius: 0;
+    border-bottom: 3px solid #333333;
+}
+.breadcrumb li{
+    float: left;
+    margin-right: 5px;
+    position: relative;
+}
+.breadcrumb li:last-child{
+    padding: 5px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    background: #333333;
+    border-radius: 10px;
+    border: 1px solid #333333;
+}
+.breadcrumb li:before{ display: none; }
+.breadcrumb li a{
+    display: block;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 1px solid #909090;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333;
+    transition: all 0.3s ease 0s;
+}
+.breadcrumb  li:hover a{
+    text-decoration: none;
+    color: #fff;
+    background: #333333;
+    border-color: #333333;
+}
+.breadcrumb li.active span{ display: block }
+.breadcrumb li a:before,
+.breadcrumb li a:after,
+.breadcrumb li.active span:before,
+.breadcrumb li.active span:after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    border: 10px solid transparent;
+    border-top: 10px solid #333333;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+}
+.breadcrumb li a:after,
+.breadcrumb li.active span:after{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    border: 4px solid #333333;
+    bottom: -32px;
+}
+@media only screen and (max-width: 479px){
+    .breadcrumb li a,
+    .breadcrumb li:last-child{
+        padding: 8px;
+        font-size: 12px;
+    }
+    .breadcrumb li a:before,
+    .breadcrumb li.active span:before{
+        border: 7px solid transparent;
+        border-top: 7px solid #333333;
+        bottom: -14px;
+    }
+}

@@ -1,0 +1,130 @@
+.nav-link{
+    font-family: 'Sofia', cursive;
+    color : #8e8e8e;
+}
+.nav-link:hover{
+    color : #000000;
+}
+.content-footer{
+    font-family: 'ui-serif';
+    color: #666666;
+}
+.content-footer-xs{
+    font-family: 'ui-serif';
+    color: #666666;
+    font-size: small;
+}
+.content-footer-title{
+    font-family: 'ui-serif';
+    color: #666666;
+    font-weight: bold;
+}
+.social-links{
+    padding: 0;
+    margin: 0 0 15px;
+    list-style: none;
+}
+.social-links li{
+    display: inline-block;
+    margin: 0 3px;
+}
+.social-links li a{
+    color: rgb(31, 31, 31);
+    line-height: 33px;
+    height: 35px;
+    width: 35px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+.social-links li a:hover{
+    color: #fff;
+    background-color: #313131;
+}
+.toolTip{
+    color: #ff3466;
+    background: #fff;
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: none;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.toolTip:hover{
+    color: #fff;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+    border: none;
+}
+.toolTip:focus{ outline: none; }
+.toolTip:before,
+.toolTip:after{
+    content: attr(data-tip);
+    color: #fff;
+    background-color: #131313;
+    font-size: 15px;
+    font-weight: 500;
+    width: 180px;
+    padding: 4px 10px 5px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+.toolTip:after{
+    content: '';
+    padding: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 0;
+    z-index: -1;
+}
+.toolTip:hover:before{
+    opacity: 1;
+    visibility: visible;
+    animation: shake 500ms ease-in-out forwards;
+}
+.toolTip.left:hover:before{ animation: shake_1 500ms ease-in-out forwards; }
+.toolTip:hover:after{
+    opacity: 1;
+    visibility: visible;
+}
+.toolTip.top:before,
+.toolTip.top:after{
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 15px);
+}
+.toolTip.top:after{
+    transform: translateX(-50%) rotate(45deg);
+    bottom: calc(100% + 11px);
+}
+
+@keyframes shake{
+    0%{ transform: translateX(-50%) rotate(5deg); }
+ 
+    50%{ transform: translateX(-50%) rotate(-6deg); }
+ 
+    70%{ transform: translateX(-50%) rotate(6deg); }
+ 
+    100%{ transform: translateX(-50%) rotate(0deg); }
+}
+@keyframes shake_1{
+    0%{ transform: translateY(-50%) rotate(2deg); }
+ 
+    50%{ transform: translateY(-50%) rotate(-3deg); }
+ 
+    70%{ transform: translateY(-50%) rotate(3deg); }
+ 
+    100%{ transform: translateY(-50%) rotate(0deg); }
+}
+@media only screen and (max-width: 767px) {
+    .toolTip{ margin: 0 0 20px; }
+}

@@ -1,0 +1,56 @@
+.serviceBox{
+    color: #606060;
+    font-family: 'Bitter', serif;
+    padding: 5px 10px 0;
+}
+.serviceBox .service-icon{
+    color: #363636;
+    font-size: 50px;
+    text-align: center;
+    line-height: 100px;
+    width: 105px;
+    height: 105px;
+    margin: 0 auto 25px;
+    border: 3px solid #363636;
+    border-radius: 20px 20px;
+    position: relative;
+}
+.serviceBox .service-icon:before,
+.serviceBox .service-icon:after{
+    content: "";
+    width: 60px;
+    height: 60px;
+    border-top: 8px solid #363636;
+    border-right: 8px solid #363636;
+    border-radius: 0 20px 0 0;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+}
+.serviceBox .service-icon:after{
+    transform: rotate(180deg);
+    top: auto;
+    bottom: -6px;
+    right: auto;
+    left: -6px;
+}
+.serviceBox .title{
+    color: #363636;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    margin: 0 0 5px;
+}
+.serviceBox .description{
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 23px;
+    margin: 0;
+}
+
+.serviceBox.gray .title{ color: #404E51; }
+@media only screen and (max-width:990px){
+    .serviceBox{ margin: 0 0 30px; }
+}
